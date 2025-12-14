@@ -5,6 +5,32 @@ LINK - https://trueig-insta.onrender.com
 
 This is a full-stack Instagram clone application built with the MERN stack (MongoDB, Express, React, Node.js). It includes features like user authentication, posting, following users, liking and commenting on posts, and real-time chat.
 
+# Screenshots
+
+- Log in:
+![Log in](./screenshots/log-in.png)
+
+- Sign up:
+![Sign up page](./screenshots/sign-up.png)
+
+- Feed:
+![Feed](./screenshots/feed.png)
+
+- Posts:
+![Posts](./screenshots/posts.png)
+
+- Like and comment functionality:
+![Like and Comment](./screenshots/like-and-comment.png)
+
+- Profile Page:
+![Profile Page](./screenshots/profile-page.png)
+
+- Chat with emojis:
+![Chat with emojis](./screenshots/chat-with-emoji.png)
+
+- Settings page:
+![Settings page](./screenshots/settings-page.png)
+
 ## Features
 
 - **User Authentication:** Sign up, log in, and log out with JWT-based authentication.
