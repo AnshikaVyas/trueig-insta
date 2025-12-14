@@ -7,13 +7,13 @@ const router = express();
 
 router.route("/signup").post(uploadAvatar.single('avatar'), signupUser);
 router.route("/login").post(loginUser);
-router.route("/logouty").get(logoutUser);
+router.route("/logout").get(logoutUser);
 
 router.route("/me")
     .get(isAuthenticated, getAccountDetails)
     .delete(isAuthenticated, deleteProfile);
 
-router.route("/users/:username").get(isAuthenticated, getUserDetails);
+router.route("/user/:username").get(isAuthenticated, getUserDetails);
 router.route("/userdetails/:id").get(isAuthenticated, getUserDetailsById);
 
 router.route("/users/suggested").get(isAuthenticated, getAllUsers);
