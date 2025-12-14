@@ -3,31 +3,31 @@ export const SOCKET_ENDPOINT = "https://instagrammern.herokuapp.com";
 
 export const stories = [
     {
-        title: "Alfez",
-        image: "alfez",
+        title: "Caroline",
+        image: "caroline"
     },
     {
-        title: "AWS",
-        image: "aws-cloud-clubs"
+        title: "Demon",
+        image: "demon"
     },
     {
-        title: "MC",
-        image: "medi-caps",
+        title: "John Cena",
+        image: "john-cena"
     },
     {
-        title: "Medicaps",
-        image: "medicaps",
+        title: "Katherene",
+        image: "katherene"
     },
     {
-        title: "John Doe",
-        image: "person",
+        title: "Klaus",
+        image: "klaus"
     },
     {
-        title: "Student",
-        image: "student",
+        title: "Stefen",
+        image: "stefen"
     },
     {
-        title: "TRUEiGTECH",
-        image: "trueigtech",
-    },
+        title: "Peter Parker",
+        image: "man"
+    }
 ];
