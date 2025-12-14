@@ -1,0 +1,664 @@
+{
+	"info": {
+		"_postman_id": "a9e6b8c8-8c1d-4f7f-8b1e-7b1e1b1b1b1b",
+		"name": "Insta-with-commits - Anshika Vyas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Anshika Vyas",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "anshika@example.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "anshika_vyas",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"signup"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"anshika@example.com\",\n    \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"me"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"me"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/anshika_vyas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+							"anshika_vyas"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Suggested Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/suggested",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+							"suggested"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users?q=test",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+						],
+							"query": [
+								{
+									"key": "q",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Follow/Unfollow User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/follow/60f7e6f3b5f3a12d8c9f7b1e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"follow",
+							"60f7e6f3b5f3a12d8c9f7b1e"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Anshika Vyas Updated",
+									"type": "text"
+								},
+								{
+									"key": "bio",
+									"value": "This is my updated bio.",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "https://example.com/updated",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/update/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"update",
+							"profile"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"password123\",\n    \"newPassword\": \"newpassword123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/update/password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"update",
+							"password"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"anshika@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/password/forgot",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"password",
+							"forgot"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"newpassword123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/password/reset/your_reset_token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"password",
+							"reset",
+							"your_reset_token"
+						]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "New Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "caption",
+									"value": "My first post!",
+									"type": "text"
+								},
+								{
+									"key": "post",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/post/new",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+							"new"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/posts/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts",
+							"all"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Posts of Following",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"posts"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/post/detail/60f7e6f3b5f3a12d8c9f7b1e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+							"detail",
+							"60f7e6f3b5f3a12d8c9f7b1e"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like/Unlike Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/post/60f7e6f3b5f3a12d8c9f7b1e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+							"60f7e6f3b5f3a12d8c9f7b1e"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save/Unsave Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/post/60f7e6f3b5f3a12d8c9f7b1e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+							"60f7e6f3b5f3a12d8c9f7b1e"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Caption",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"caption\": \"This is an updated caption.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/post/60f7e6f3b5f3a12d8c9f7b1e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+							"60f7e6f3b5f3a12d8c9f7b1e"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/post/60f7e6f3b5f3a12d8c9f7b1e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+							"60f7e6f3b5f3a12d8c9f7b1e"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\": \"This is a great post!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/post/comment/60f7e6f3b5f3a12d8c9f7b1e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"post",
+							"comment",
+							"60f7e6f3b5f3a12d8c9f7b1e"
+						]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "New Chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"60f7e6f3b5f3a12d8c9f7b1e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/newChat",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"newChat"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/chats",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"chats"
+						]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "New Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"chatId\": \"60f7e6f3b5f3a12d8c9f7b1e\",\n    \"content\": \"Hello!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/newMessage",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"newMessage"
+						]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/messages/60f7e6f3b5f3a12d8c9f7b1e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"messages",
+							"60f7e6f3b5f3a12d8c9f7b1e"
+						]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:4000/api/v1"
+		}
+	]
+}
