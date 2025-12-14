@@ -9,6 +9,7 @@ import UpdateProfile from './components/User/Update/UpdateProfile';
 import UpdatePassword from './components/User/Update/UpdatePassword';
 import SpinLoader from './components/Layouts/SpinLoader';
 
+const Home = lazy(() => import('./components/Home/Home'));
 const SignUp = lazy(() => import('./components/User/SignUp'));
 const Login = lazy(() => import('./components/User/Login'));
 const ForgotPassword = lazy(() => import('./components/User/ForgotPassword'));
