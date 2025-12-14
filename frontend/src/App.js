@@ -15,8 +15,8 @@ const Login = lazy(() => import('./components/User/Login'));
 const ForgotPassword = lazy(() => import('./components/User/ForgotPassword'));
 const ResetPassword = lazy(() => import('./components/User/ResetPassword'));
 const Update = lazy(() => import('./components/User/Update/Update'));
+const Inbox = lazy(() => import('./components/Chats/Inbox'));
 const NotFound = lazy(() => import('./components/Errors/NotFound'));
-
 
 function App() {
 
