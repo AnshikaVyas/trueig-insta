@@ -1,1 +1,1 @@
-# TRUEiGTECH Task Instagram
+# Simple Instagram backend

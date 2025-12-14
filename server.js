@@ -1,4 +1,3 @@
-const path = require('path');
 const express = require('express');
 const app = require('./backend/app');
 const connectDatabase = require('./backend/config/database');
@@ -6,6 +5,27 @@ const connectDatabase = require('./backend/config/database');
 const PORT = 4000;
 
 connectDatabase();
+
+// deployment
+__dirname = path.resolve();
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+    });
+} else {
+    app.get('/', (req, res) => {
+        res.send('Server is Running! 🚀');
+    });
+}
+
+const server = app.listen(PORT, () => {
+    console.log(`Server Running on http://localhost:${PORT}`);
+});
+
+
+// ============= socket.io ==============
 
 const io = require("socket.io")(server, {
     // pingTimeout: 60000,
