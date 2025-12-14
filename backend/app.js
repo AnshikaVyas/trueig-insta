@@ -14,8 +14,8 @@ if (process.env.NODE_ENV != "production") {
 }
 
 // import routes
-const user = require('./routes/userRoute');
 const post = require('./routes/postRoute');
+const user = require('./routes/userRoute');
 const chat = require('./routes/chatRoute');
 const message = require('./routes/messageRoute');
 
